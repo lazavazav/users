@@ -6,8 +6,6 @@
   to = "/.netlify/functions/:splat"
   status = 200
 
-  [dev]
-  framework = "static"
-  publish = "dist"
+  
 
  
