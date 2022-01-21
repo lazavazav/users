@@ -58,19 +58,3 @@ exports.handler = (event, context, callback) => {
       })
   );
 };
-
-// exports.handler = async (event, context) => {
-//   client
-//     .query(q.Paginate(q.Indexes()))
-//     .then((response) => {
-//       console.log('response', response);
-//       const notesRefs = response.data;
-
-//       const getAllProjectsDataQuery = notesRefs.map((ref) => {
-//         return q.Get(ref);
-//       });
-//       // query the refs
-//       return client.query(getAllProjectsDataQuery).then((data) => data);
-//     })
-//     .catch((error) => console.warn('error', error.message));
-// };

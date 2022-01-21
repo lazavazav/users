@@ -4,7 +4,7 @@
 
 document.getElementById('seeData').addEventListener('click', appendData);
 function appendData() {
-  fetch('https://hardcore-mayer-7938e9.netlify.app/.netlify/functions/readAll')
+  fetch('https://hardcore-mayer-7938e9.netlify.app/api/readAll')
     .then((response) => response.json())
     .then((data) => {
       var mainContainer = document.getElementById('myData');
