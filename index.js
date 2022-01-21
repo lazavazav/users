@@ -22,8 +22,6 @@ function appendData() {
   fetch('/.netlify/functions/readAll')
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.data[2]);
-
       var mainContainer = document.getElementById('myData');
       for (var i = 0; i < data.data.length; i++) {
         var div = document.createElement('div');
