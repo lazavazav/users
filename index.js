@@ -1,20 +1,5 @@
-const fetch = require('node-fetch');
-// const readAll = () => {
-//   return (
-//     fetch('http://localhost:8888/api/readAll')
-//       .then((response) => {
-//         console.log(response.json());
-//         return response.json();
-//       })
-//       // .then(function (response) {
-//       //   appendData(response);
-//       // })
-//       .catch(function (err) {
-//         console.log(err);
-//       })
-//   );
-// };
-// readAll();
+import fetch from 'node-fetch';
+
 // fetch('http://localhost:8888/api/readAll')
 //   .then((response) => response.json())
 //   .then((json) => console.log({ json }));
@@ -32,22 +17,3 @@ function appendData() {
     })
     .catch(console.error);
 }
-
-// const deleteRow = (Id) => {
-//   return fetch(`/.netlify/functions/deleteRow/${Id}`, {
-//     method: 'POST',
-//   }).then((response) => {
-//     return response.json();
-//   });
-// };
-
-// const batchDelete = (Ids) => {
-//   return fetch(`/.netlify/functions/delete-batch`, {
-//     body: JSON.stringify({
-//       ids: Ids,
-//     }),
-//     method: 'POST',
-//   }).then((response) => {
-//     return response.json();
-//   });
-// };
