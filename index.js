@@ -19,7 +19,7 @@
 //   .then((json) => console.log({ json }));
 
 function appendData() {
-  fetch('http://localhost:8888/api/readAll')
+  fetch('/.netlify/functions/readAll')
     .then((response) => response.json())
     .then((data) => {
       console.log(data.data[2]);
