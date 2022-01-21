@@ -1,25 +1,37 @@
-const readAll = () => {
-  return fetch('/.netlify/functions/readAll')
-    .then((response) => {
-      console.log(response);
-      return response;
-    })
-    .then(function (data) {
-      appendData(data);
-    })
-    .catch(function (err) {
-      console.log(err);
-    });
-};
-readAll();
+// const readAll = () => {
+//   return (
+//     fetch('http://localhost:8888/api/readAll')
+//       .then((response) => {
+//         console.log(response.json());
+//         return response.json();
+//       })
+//       // .then(function (response) {
+//       //   appendData(response);
+//       // })
+//       .catch(function (err) {
+//         console.log(err);
+//       })
+//   );
+// };
+// readAll();
+// fetch('http://localhost:8888/api/readAll')
+//   .then((response) => response.json())
+//   .then((json) => console.log({ json }));
 
-function appendData(data) {
-  var mainContainer = document.getElementById('myData');
-  for (var i = 0; i < data.length; i++) {
-    var div = document.createElement('div');
-    div.innerHTML = 'Indicators: ' + data[i];
-    mainContainer.appendChild(div);
-  }
+function appendData() {
+  fetch('http://localhost:8888/api/readAll')
+    .then((response) => response.json())
+    .then((data) => {
+      console.log(data.data[2]);
+
+      var mainContainer = document.getElementById('myData');
+      for (var i = 0; i < data.data.length; i++) {
+        var div = document.createElement('div');
+        div.innerHTML = 'Indicators: ' + data.data[i];
+        mainContainer.appendChild(div);
+      }
+    })
+    .catch(console.error);
 }
 
 // const deleteRow = (Id) => {
