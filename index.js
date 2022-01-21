@@ -1,11 +1,10 @@
-import fetch from 'node-fetch';
-
 // fetch('http://localhost:8888/api/readAll')
 //   .then((response) => response.json())
 //   .then((json) => console.log({ json }));
+
 document.getElementById('seeData').addEventListener('click', appendData);
 function appendData() {
-  fetch('/.netlify/functions/readAll')
+  fetch('https://hardcore-mayer-7938e9.netlify.app/.netlify/functions/readAll')
     .then((response) => response.json())
     .then((data) => {
       var mainContainer = document.getElementById('myData');
