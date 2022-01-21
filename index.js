@@ -1,3 +1,4 @@
+const fetch = require('node-fetch');
 // const readAll = () => {
 //   return (
 //     fetch('http://localhost:8888/api/readAll')
@@ -17,7 +18,7 @@
 // fetch('http://localhost:8888/api/readAll')
 //   .then((response) => response.json())
 //   .then((json) => console.log({ json }));
-
+document.getElementById('seeData').addEventListener('click', appendData);
 function appendData() {
   fetch('/.netlify/functions/readAll')
     .then((response) => response.json())
