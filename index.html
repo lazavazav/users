@@ -9,22 +9,17 @@
       type="text/javascript"
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
     ></script>
+    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
-    <h1>SASA test site</h1>
+    <!-- Log in / Sign up - when the user is not logged in
+   Username / Log out - when the user is logged in -->
+
+    <div data-netlify-identity-menu id="loginMenu"></div>
+    <h1>SASA Test Site</h1>
     <button type="button" id="seeData">See Data</button>
     <h4 id="title"></h4>
     <div id="myData"></div>
-    <!-- Add a menu:
-   Log in / Sign up - when the user is not logged in
-   Username / Log out - when the user is logged in
-  -->
-    <div data-netlify-identity-menu></div>
-
-    <!-- Add a simpler button:
-    Simple button that will open the modal.
-  -->
-    <div data-netlify-identity-button>Login with Netlify Identity</div>
 
     <script src="index.js"></script>
   </body>
