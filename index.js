@@ -10,6 +10,7 @@ function appendData() {
         titleBox.innerHTML = "Indicators for Women's Health";
         div.innerHTML = data.data[i];
         mainContainer.appendChild(div);
+        document.getElementById('seeData').disabled = true;
       }
     })
     .catch(console.error);
