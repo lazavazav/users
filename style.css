@@ -47,3 +47,9 @@ body {
 #loginBtn a:hover {
   background-color: #0355ab;
 }
+
+.tableContainer {
+  margin: 20px;
+  padding: 20px;
+  width: 50%;
+}
