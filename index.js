@@ -82,6 +82,7 @@ function addTable() {
   fetch('https://hardcore-mayer-7938e9.netlify.app/.netlify/functions/health')
     .then((response) => response.json())
     .then((data) => {
+      console.log(data.data);
       for (let i = 0; i < data.data.length; i++) {
         let row = document.createElement('div');
         row.innerHTML = data.data[i];
