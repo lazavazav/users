@@ -21,6 +21,8 @@ exports.handler = (event, context, callback) => {
       //.query(q.Get(q.Index('health_by_indicator')))
       //.query(q.Paginate(q.Indexes()))
       //.query(q.Paginate(q.Match(q.Ref('indexes/health_by_indicator'))))
+
+      //queries select field data
       .query(
         q.Map(
           q.Paginate(q.Documents(q.Collection('newHealth')), {
@@ -29,6 +31,14 @@ exports.handler = (event, context, callback) => {
           q.Lambda('X', q.Select(['data', 'Indicator Name'], q.Get(q.Var('X'))))
         )
       )
+
+      //queries whole collection
+      // .query(
+      //   q.Map(
+      //     q.Paginate(q.Documents(q.Collection('newHealth'))),
+      //     q.Lambda((x) => q.Get(x))
+      //   )
+      // )
 
       .then((response) => {
         console.log('success', response);

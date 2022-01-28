@@ -8,15 +8,14 @@ const client = new faunadb.Client({
 });
 
 exports.handler = (event, context, callback) => {
-  console.log(`Function 'readAll' invoked`);
+  console.log(`Function 'povWhiteRate' invoked`);
   return client
     .query(
       q.Map(
         q.Paginate(q.Documents(q.Collection('poverty')), {
           size: 12,
         }),
-        q.Lambda('X', q.Select(['data', 'Rate_for_White'], q.Get(q.Var('X')))),
-        q.Lambda('X', q.Select(['data', 'Rate_for_Black'], q.Get(q.Var('X'))))
+        q.Lambda('X', q.Select(['data', 'Rate_for_White'], q.Get(q.Var('X'))))
       )
     )
 

@@ -8,7 +8,7 @@ const client = new faunadb.Client({
 });
 
 exports.handler = (event, context, callback) => {
-  console.log(`Function 'readAll' invoked`);
+  console.log(`Function 'povIndicator' invoked`);
   return client
     .query(
       q.Map(

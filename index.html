@@ -31,11 +31,48 @@
     </div>
     <div class="tableContainer">
       <h4>Select below to see preferred table.</h4>
-      <select class="form-select">
-        <option id="healthOption">Health Data</option>
-        <option id="povertyOption">Poverty Data</option>
+
+      <select class="form-select" id="selectOptions">
+        <option id="healthOption" value="health">Health Data</option>
+        <option id="povertyOption" value="poverty">Poverty Data</option>
       </select>
-      <div id="myTable"></div>
+      <button
+        type="submit"
+        class="btn btn-secondary"
+        id="seeData"
+        onclick="getOption()"
+      >
+        Submit
+      </button>
+
+      <div id="myTable">
+        <!-- <table class="table table-striped">
+          <thead>
+            <tr>
+              <th id="indicatorName"></th>
+              <th id="blackRate"></th>
+              <th id="whiteRate"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+            <tr>
+              <td></td>
+              <td></td>
+              <td></td>
+            </tr>
+          </tbody>
+        </table> -->
+      </div>
     </div>
 
     <script
