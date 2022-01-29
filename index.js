@@ -23,73 +23,65 @@ function getOption() {
   addTable();
 }
 
-// function addTable() {
-//   let myTableDiv = document.getElementById('myTable');
-
-//   let table = document.createElement('TABLE');
-//   table.border = '1';
-
-//   let tableBody = document.createElement('TBODY');
-//   table.appendChild(tableBody);
-
-//   let tableHead = document.createElement('THEAD');
-//   table.appendChild(tableHead);
-
-//   let tr1 = document.createElement('TR');
-//   tr1.innerHTML = 'Indicator Name'
-//   tableHead.appendChild(tr1);
-
-//   let tr2 = document.createElement('TR');
-//   tr2.innerHTML = 'Rate for Black';
-//   tableHead.appendChild(tr2);
-
-//   let tr3 = document.createElement('TR');
-//   tr3.innerHTML = 'Rate for White';
-//   tableHead.appendChild(tr3);
-
-//     for (var j = 0; j < 4; j++) {
-//       var td = document.createElement('TD');
-//       td.width = '75';
-//       td.appendChild(document.createTextNode('Cell ' + j));
-//       tr.appendChild(td);
-//     }
-
-//   myTableDiv.appendChild(table);
-// }
 function addTable() {
-  let myTableDiv = document.getElementById('myTable');
-
-  let table = document.createElement('TABLE');
-  table.border = '1';
-  table.className = 'table table-striped';
-  let tableHead = document.createElement('THEAD');
-  table.appendChild(tableHead);
-  let tableBody = document.createElement('TBODY');
-  table.appendChild(tableBody);
-
-  let heading1 = document.createElement('TH');
-  heading1.innerHTML = 'Indicator Name';
-  tableHead.appendChild(heading1);
-
-  let heading2 = document.createElement('TH');
-  heading2.innerHTML = 'Rate for Black';
-  tableHead.appendChild(heading2);
-
-  let heading3 = document.createElement('TH');
-  heading3.innerHTML = 'Rate for White';
-  tableHead.appendChild(heading3);
+  let table = document.getElementById('table');
+  let tbl = document.createElement('table');
+  let tblBody = document.createElement('tbody');
+  let tableHead = document.createElement('thead');
+  table.appendChild(tbl);
+  let tr = document.createElement('tr');
+  tableHead.appendChild(tr);
+  let tr1 = document.createElement('th');
+  let tr1Text = document.createTextNode('Indicator Name');
+  tr1.appendChild(tr1Text);
+  tr.appendChild(tr1);
+  let tr2 = document.createElement('th');
+  let tr2Text = document.createTextNode('Black Rate');
+  tr2.appendChild(tr2Text);
+  tr.appendChild(tr2);
+  let tr3 = document.createElement('th');
+  let tr3Text = document.createTextNode('White Rate');
+  tr3.appendChild(tr3Text);
+  tr.appendChild(tr3);
+  tr1.style.width = '50%';
+  tr2.style.width = '25%';
+  tr3.style.width = '25%';
 
   fetch('https://hardcore-mayer-7938e9.netlify.app/.netlify/functions/health')
     .then((response) => response.json())
     .then((data) => {
-      console.log(data.data);
-      for (let i = 0; i < data.data.length; i++) {
-        let row = document.createElement('div');
-        row.innerHTML = data.data[i];
-        tableBody.appendChild(row);
+      let infoName = data.data.map(function (element) {
+        return `${element.Name}`;
+      });
+      let bRate = data.data.map(function (element) {
+        return `${element.BlackRate}`;
+      });
+      let wRate = data.data.map(function (element) {
+        return `${element.WhiteRate}`;
+      });
+      for (var i = 0; i < data.data.length; i++) {
+        let row = document.createElement('tr');
+        let cell1 = document.createElement('td');
+        let cellText1 = document.createTextNode(infoName[i]);
+        cell1.appendChild(cellText1);
+        row.appendChild(cell1);
+        let cell2 = document.createElement('td');
+        let cellText2 = document.createTextNode(bRate[i]);
+        cell2.appendChild(cellText2);
+        row.appendChild(cell2);
+        let cell3 = document.createElement('td');
+        let cellText3 = document.createTextNode(wRate[i]);
+        cell3.appendChild(cellText3);
+        row.appendChild(cell3);
+        tblBody.appendChild(row);
+        cell1.style.width = '50%';
+        cell2.style.width = '25%';
+        cell3.style.width = '25%';
       }
+      tbl.appendChild(tableHead);
+      tbl.appendChild(tblBody);
+      tbl.setAttribute('border', '2');
+      tbl.className = 'table table-striped';
     })
     .catch(console.error);
-
-  myTableDiv.appendChild(table);
 }
