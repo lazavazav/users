@@ -166,3 +166,5 @@ function addPovertyTable() {
     closeBtn.parentElement.parentElement.parentElement.style.display = 'none';
   });
 }
+const user = auth.currentUser();
+console.log(user);
