@@ -3,7 +3,7 @@
 html,
 body {
   width: 100%;
-  height: auto;
+  height: 100%;
   margin: 0px;
   padding: 0px;
   overflow-x: hidden;
@@ -17,15 +17,18 @@ body {
 *:after {
   box-sizing: inherit;
 }
-
+#loginMenu {
+  float: right;
+  margin-top: 20px;
+}
 #loginMenu li {
   list-style-type: none;
   display: inline;
-  margin: 10px;
+  margin: 0 10px;
   padding: 5px;
   font-size: 20px;
   background-color: #026ee0;
-  border-radius: 3px;
+  border-radius: 5px;
 }
 #loginMenu li:hover {
   background-color: #0355ab;
@@ -35,23 +38,32 @@ body {
   text-decoration-line: none;
   padding: 5px;
 }
-#loginBtn a {
-  float: right;
-  font-size: 22px;
-  background-color: #026ee0;
-  border-radius: 3px;
+li.netlify-identity-item.netlify-identity-user-details {
   color: snow;
-  text-decoration-line: none;
-  padding: 8px;
-}
-#loginBtn a:hover {
-  background-color: #0355ab;
 }
 
-.tableContainer {
-  margin: 20px;
-  padding: 20px;
+/* The hero image */
+.hero-image {
+  /* Use "linear-gradient" to add a darken background effect to the image (photographer.jpg). This will make the text easier to read */
+  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)),
+    url('/Images/columbus.jpeg');
+
+  /* Set a specific height */
+  height: 100%;
+
+  /* Position and center the image to scale nicely on all screens */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  position: relative;
 }
-#seeTableBtn {
-  margin: 10px;
+
+/* Place text in the middle of the image */
+.hero-text {
+  text-align: center;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  color: white;
 }
