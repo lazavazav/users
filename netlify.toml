@@ -13,11 +13,7 @@
   status = 200
   conditions = {Role = ["registered"]}
 
-  [[redirects]]
-  from = "/sasa.html"
-  to = "/"
-  force = true
-  status = 401
+ 
 
 
 
