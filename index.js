@@ -40,57 +40,57 @@
 //   };
 // }
 
-type = 'text/javascript';
-src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
+// type = 'text/javascript';
+// src = 'https://identity.netlify.com/v1/netlify-identity-widget.js';
 
-const button1 = document.getElementById('left');
-const button2 = document.getElementById('right');
+// const button1 = document.getElementById('left');
+// const button2 = document.getElementById('right');
 
-const login = () => netlifyIdentity.open('login');
-const signup = () => netlifyIdentity.open('signup');
+// const login = () => netlifyIdentity.open('login');
+// const signup = () => netlifyIdentity.open('signup');
 
-// by default, add login and signup functionality
-button1.addEventListener('click', login);
-button2.addEventListener('click', signup);
+// // by default, add login and signup functionality
+// button1.addEventListener('click', login);
+// button2.addEventListener('click', signup);
 
-const updateUserInfo = (user) => {
-  const container = document.querySelector('.user-info');
+// const updateUserInfo = (user) => {
+//   const container = document.querySelector('.user-info');
 
-  // cloning the buttons removes existing event listeners
-  const b1 = button1.cloneNode(true);
-  const b2 = button2.cloneNode(true);
+//   // cloning the buttons removes existing event listeners
+//   const b1 = button1.cloneNode(true);
+//   const b2 = button2.cloneNode(true);
 
-  // empty the user info div
-  container.innerHTML = '';
+//   // empty the user info div
+//   container.innerHTML = '';
 
-  if (user) {
-    b1.innerText = 'Log Out';
-    b1.addEventListener('click', () => {
-      netlifyIdentity.logout();
-    });
+//   if (user) {
+//     b1.innerText = 'Log Out';
+//     b1.addEventListener('click', () => {
+//       netlifyIdentity.logout();
+//     });
 
-    b2.innerText = 'Manage Account';
-    b2.addEventListener('click', () => {
-      // TODO handle subscription management
-    });
-  } else {
-    // if no one is logged in, show login/signup options
-    b1.innerText = 'Log In';
-    b1.addEventListener('click', login);
+//     b2.innerText = 'Manage Account';
+//     b2.addEventListener('click', () => {
+//       // TODO handle subscription management
+//     });
+//   } else {
+//     // if no one is logged in, show login/signup options
+//     b1.innerText = 'Log In';
+//     b1.addEventListener('click', login);
 
-    b2.innerText = 'Sign Up';
-    b2.addEventListener('click', signup);
-  }
+//     b2.innerText = 'Sign Up';
+//     b2.addEventListener('click', signup);
+//   }
 
-  // add the updated buttons back to the user info div
-  container.appendChild(b1);
-  container.appendChild(b2);
-};
+//   // add the updated buttons back to the user info div
+//   container.appendChild(b1);
+//   container.appendChild(b2);
+// };
 
-const handleUserStateChange = (user) => {
-  updateUserInfo(user);
-};
+// const handleUserStateChange = (user) => {
+//   updateUserInfo(user);
+// };
 
-netlifyIdentity.on('init', handleUserStateChange);
-netlifyIdentity.on('login', handleUserStateChange);
-netlifyIdentity.on('logout', handleUserStateChange);
+// netlifyIdentity.on('init', handleUserStateChange);
+// netlifyIdentity.on('login', handleUserStateChange);
+// netlifyIdentity.on('logout', handleUserStateChange);
