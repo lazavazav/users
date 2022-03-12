@@ -8,6 +8,7 @@ function getOption() {
     addPovertyTable();
   }
 }
+
 let table = document.getElementById('table');
 function addHealthTable() {
   let tbl = document.createElement('table');

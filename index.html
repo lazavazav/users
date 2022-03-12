@@ -11,16 +11,21 @@
       integrity="sha384-EVSTQN3/azprG1Anm3QDgpJLIm9Nao0Yz1ztcQTwFspd3yD65VohhpuuCOmLASjC"
       crossorigin="anonymous"
     />
-
+    <link rel="stylesheet" href="style.css" />
     <script
       type="text/javascript"
+      ;
       src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+      ;
     ></script>
-    <link rel="stylesheet" href="style.css" />
   </head>
   <body>
     <div class="hero-image">
-      <div data-netlify-identity-menu id="loginMenu"></div>
+      <!-- <div data-netlify-identity-menu id="loginMenu"></div> -->
+      <div class="user-info">
+        <button id="left">Log In</button>
+        <button id="right">Sign Up</button>
+      </div>
       <div class="hero-text">
         <h1>SASA</h1>
         <p>Social Analytics for Sustainable Accountability</p>
