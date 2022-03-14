@@ -113,8 +113,6 @@ li.netlify-identity-item.netlify-identity-user-details {
 .b {
   display: flex;
   justify-content: center;
-  position: relative;
-  text-align: left;
   font-size: 18px;
   border-bottom: solid #876653 5px;
   background-color: #d3c9bc;
@@ -122,21 +120,19 @@ li.netlify-identity-item.netlify-identity-user-details {
   grid-row: 2;
   padding: 20px;
 }
-
-.profileContainer {
-  width: 60%;
-  text-align: left;
-  background-color: snow;
-  padding: 10px;
+#profileBtn {
   margin: 10px;
 }
-.userInfoBox {
-  border: 2px solid grey;
-  background-color: lightgrey;
-  margin: 5px;
-  border-radius: 3px;
-  padding: 5px;
+form {
+  min-width: 430px;
+  border: 2px solid #2e9cca;
+  padding: 15px;
+  background-color: #ebe6df;
+  border-radius: 5px;
 }
+/* #streetEdit {
+  position: absolute;
+} */
 
 .g {
   grid-column: 1 / span 10;
