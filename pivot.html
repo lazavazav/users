@@ -26,6 +26,10 @@
       rel="stylesheet"
     />
     <meta name="format-detection" content="telephone=no" />
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
 
   <body>
@@ -242,6 +246,7 @@
           </div>
         </div>
         <div class="header">
+          <div data-netlify-identity-menu id="loginMenu"></div>
           <p class="title">Search All Data</p>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -257,13 +262,6 @@
                   >Search
                 </a>
               </li>
-              <button
-                class="btn btn-info btn-sm position-absolute top-0 end-0"
-                style="margin: 5px"
-                onclick="window.print()"
-              >
-                Print this Page
-              </button>
             </ol>
           </nav>
         </div>
@@ -273,6 +271,13 @@
           Drag and Drop field titles from the left column into the shaded box to
           view the fields. Click the blue arrow icon to filter.
         </p>
+        <button
+          class="btn btn-sm position-absolute bottom-0 end-0"
+          style="background-color: #026ee0; color: snow"
+          onclick="window.print()"
+        >
+          Print Result
+        </button>
       </div>
 
       <div class="box c">

@@ -35,8 +35,8 @@ body {
 }
 #loginMenu {
   position: absolute;
-  top: 10;
-  left: 70%;
+  top: 3%;
+  right: 3%;
 }
 a.netlify-identity-logout,
 a.netlify-identity-login,
@@ -130,9 +130,6 @@ form {
   background-color: #ebe6df;
   border-radius: 5px;
 }
-/* #streetEdit {
-  position: absolute;
-} */
 
 .g {
   grid-column: 1 / span 10;
@@ -182,4 +179,14 @@ form {
 }
 #sidebar a:hover {
   color: #853131;
+}
+/* @media (min-width: 576px) and (max-width: 1200px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: block;
+  }
+} */
+@media (max-width: 876px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
+  }
 }

@@ -21,16 +21,15 @@
       integrity="sha384-wEmeIV1mKuiNpC+IOBjI7aAzPcEZeedi5yW5f2yOq55WWLwNGmvvx4Um1vskeMj0"
       crossorigin="anonymous"
     />
-    <!-- <link
-      href="https://cdnjs.cloudflare.com/ajax/libs/pivottable/2.23.0/pivot.min.js"
-      rel="stylesheet"
-      integrity="sha512-XgJh9jgd6gAHu9PcRBBAp0Hda8Tg87zi09Q2639t0tQpFFQhGpeCgaiEFji36Ozijjx9agZxB0w53edOFGCQ0g=="
-    /> -->
     <link
       href="https://fonts.googleapis.com/icon?family=Material+Icons"
       rel="stylesheet"
     />
     <meta name="format-detection" content="telephone=no" />
+    <script
+      type="text/javascript"
+      src="https://identity.netlify.com/v1/netlify-identity-widget.js"
+    ></script>
   </head>
 
   <body>
@@ -247,6 +246,7 @@
           </div>
         </div>
         <div class="header">
+          <div data-netlify-identity-menu id="loginMenu"></div>
           <p class="title">Book an Appointment for Services</p>
           <nav aria-label="breadcrumb">
             <ol class="breadcrumb">
@@ -265,9 +265,6 @@
             </ol>
           </nav>
         </div>
-      </div>
-      <div class="box b">
-        <p>Future Instructions for Booking Widget</p>
       </div>
 
       <div class="box c">

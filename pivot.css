@@ -147,8 +147,8 @@ table.pvtTable tbody tr th {
 }
 #loginMenu {
   position: absolute;
-  top: 10;
-  left: 70%;
+  top: 3%;
+  right: 3%;
 }
 a.netlify-identity-logout,
 a.netlify-identity-login,
@@ -202,6 +202,7 @@ li.netlify-identity-item.netlify-identity-user-details {
   grid-row: 2;
   padding: 20px;
 }
+
 .c {
   position: relative;
   background-color: snow;
@@ -259,9 +260,12 @@ li.netlify-identity-item.netlify-identity-user-details {
 #sidebar a:hover {
   color: #853131;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 876px) {
   #output {
     overflow-y: scroll;
+  }
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
   }
 }
 
@@ -278,6 +282,9 @@ li.netlify-identity-item.netlify-identity-user-details {
     display: none;
   }
   button {
+    display: none;
+  }
+  #loginMenu {
     display: none;
   }
 }

@@ -55,7 +55,39 @@ body {
 .collapse a {
   color: #29648a;
 }
-
+#loginMenu {
+  position: absolute;
+  top: 3%;
+  right: 3%;
+}
+a.netlify-identity-logout,
+a.netlify-identity-login,
+a.netlify-identity-signup {
+  list-style-type: none;
+  display: inline;
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: #026ee0;
+  border-radius: 5px;
+}
+a.netlify-identity-logout:hover {
+  background-color: #0355ab;
+}
+li.netlify-identity-item {
+  list-style-type: none;
+  display: inline;
+}
+#loginMenu a {
+  color: snow;
+  text-decoration-line: none;
+  padding: 5px;
+}
+li.netlify-identity-item.netlify-identity-user-details {
+  list-style-type: none;
+  display: inline;
+  font-size: 14px;
+}
 .header {
   background-color: #31332a;
   text-align: center;
@@ -76,20 +108,13 @@ body {
   padding: 0 20px;
 }
 
-.b {
-  text-align: center;
-  font-size: 18px;
-  border-bottom: solid #876653 5px;
+.c {
+  border-top: solid #876653 5px;
   background-color: #d3c9bc;
   grid-column: 1 / span 10;
-  grid-row: 2;
-  padding: 20px;
-}
-.c {
-  background-color: snow;
-  grid-column: 1 / span 10;
-  grid-row: 3;
-  padding: 20px;
+  grid-row: 2 / span 2;
+  height: 400px;
+  padding: 80px;
 }
 .bookingBox {
   display: flex;
@@ -99,7 +124,7 @@ body {
 
 .g {
   grid-column: 1 / span 10;
-  grid-row: 4;
+  grid-row: 3;
   padding: 20px;
   background-color: #31332a;
   border-top: solid #876653 5px;
@@ -145,4 +170,18 @@ body {
 }
 #sidebar a:hover {
   color: #853131;
+}
+
+@media (min-width: 576px) and (max-width: 1200px) {
+  .title {
+    font-size: 20px;
+  }
+}
+@media (max-width: 1076px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
+  }
+  .title {
+    font-size: 16px;
+  }
 }

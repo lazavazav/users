@@ -9,7 +9,6 @@ body {
   overflow-x: hidden;
   box-sizing: border-box;
   scroll-behavior: smooth;
-  padding: 10px;
 }
 
 *,
@@ -19,8 +18,8 @@ body {
 }
 #loginMenu {
   position: absolute;
-  top: 10;
-  left: 70%;
+  top: 3%;
+  right: 3%;
 }
 a.netlify-identity-logout,
 a.netlify-identity-login,
@@ -49,6 +48,7 @@ li.netlify-identity-item.netlify-identity-user-details {
   list-style-type: none;
   display: inline;
   font-size: 14px;
+  color: snow;
 }
 
 /* The hero image */
@@ -75,4 +75,10 @@ li.netlify-identity-item.netlify-identity-user-details {
   left: 50%;
   transform: translate(-50%, -50%);
   color: white;
+}
+
+@media (max-width: 876px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
+  }
 }

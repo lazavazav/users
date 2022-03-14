@@ -35,8 +35,8 @@ body {
 }
 #loginMenu {
   position: absolute;
-  top: 10;
-  left: 70%;
+  top: 3%;
+  right: 3%;
 }
 a.netlify-identity-logout,
 a.netlify-identity-login,
@@ -319,6 +319,9 @@ li.netlify-identity-item.netlify-identity-user-details {
 }
 
 @media (max-width: 576px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
+  }
   .b {
     display: flex;
     justify-content: center;
@@ -349,6 +352,9 @@ li.netlify-identity-item.netlify-identity-user-details {
 }
 
 @media (min-width: 576px) and (max-width: 992px) {
+  li.netlify-identity-item.netlify-identity-user-details {
+    display: none;
+  }
   .donutBox {
     height: auto;
     width: 85%;
