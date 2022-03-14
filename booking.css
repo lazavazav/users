@@ -146,23 +146,3 @@ body {
 #sidebar a:hover {
   color: #853131;
 }
-@media screen and (max-width: 900px) {
-  #output {
-    overflow-y: scroll;
-  }
-}
-
-@media print {
-  .material-icons {
-    display: none;
-  }
-  .a,
-  .b,
-  .g {
-    display: none;
-  }
-
-  button {
-    display: none;
-  }
-}

@@ -33,6 +33,39 @@ body {
     opacity: 1;
   }
 }
+#loginMenu {
+  position: absolute;
+  top: 10;
+  left: 70%;
+}
+a.netlify-identity-logout,
+a.netlify-identity-login,
+a.netlify-identity-signup {
+  list-style-type: none;
+  display: inline;
+  margin: 0 10px;
+  padding: 5px;
+  font-size: 18px;
+  background-color: #026ee0;
+  border-radius: 5px;
+}
+a.netlify-identity-logout:hover {
+  background-color: #0355ab;
+}
+li.netlify-identity-item {
+  list-style-type: none;
+  display: inline;
+}
+#loginMenu a {
+  color: snow;
+  text-decoration-line: none;
+  padding: 5px;
+}
+li.netlify-identity-item.netlify-identity-user-details {
+  list-style-type: none;
+  display: inline;
+  font-size: 14px;
+}
 
 .wrapper {
   display: grid;
@@ -92,6 +125,7 @@ body {
   text-align: center;
   width: 100%;
   padding: 20px;
+  position: relative;
 }
 .breadcrumb {
   background-color: #746752;

@@ -18,20 +18,27 @@ body {
   box-sizing: inherit;
 }
 #loginMenu {
-  float: right;
-  margin-top: 20px;
+  position: absolute;
+  top: 10;
+  left: 70%;
 }
-#loginMenu li {
+a.netlify-identity-logout,
+a.netlify-identity-login,
+a.netlify-identity-signup {
   list-style-type: none;
   display: inline;
   margin: 0 10px;
   padding: 5px;
-  font-size: 20px;
+  font-size: 18px;
   background-color: #026ee0;
   border-radius: 5px;
 }
-#loginMenu li:hover {
+a.netlify-identity-logout:hover {
   background-color: #0355ab;
+}
+li.netlify-identity-item {
+  list-style-type: none;
+  display: inline;
 }
 #loginMenu a {
   color: snow;
@@ -39,7 +46,9 @@ body {
   padding: 5px;
 }
 li.netlify-identity-item.netlify-identity-user-details {
-  color: snow;
+  list-style-type: none;
+  display: inline;
+  font-size: 14px;
 }
 
 /* The hero image */
