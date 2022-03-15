@@ -2,11 +2,17 @@
   functions = "functions"
 
   [[redirects]]
-  from = "/"
+  from = "/sasa"
   to ="/sasa"
   force = true
   status = 200
   conditions = {Role = ["registered"]}
+
+[[redirects]]
+  from = "/sasa"
+  to = "/login"
+  force = true
+  status = 401
 
  
 
